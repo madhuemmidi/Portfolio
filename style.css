@@ -189,18 +189,22 @@ a{color:inherit}
 
 /* responsive */
 @media (max-width:900px){
-  .topnav{padding:1.25rem 1.5rem}
+  .topnav{padding:1.25rem 1.25rem}
   .topnav ul{display:none}
-  .hero{height:auto;min-height:0}
-  .hero-bg{position:relative;height:50vh}
-  .hero-shade{display:none}
-  .hero-content{position:relative;top:auto;left:auto;transform:none;padding:2rem 1.5rem;color:var(--ink);background:var(--paper)}
-  .hero-content h1,.tag{color:var(--ink)}
-  .hero-meta{border-color:var(--line)}
-  .hero-meta li{border-color:var(--line)}
-  .hero-meta span{color:var(--muted)}
-  .btn-ghost{color:var(--ink);border-color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  /* keep overlay layout: info sits on the LEFT side over the photo */
+  .hero{height:100vh;min-height:560px}
+  .hero-bg{object-position:80% center}
+  .hero-shade{background:linear-gradient(90deg,
+    rgba(15,12,10,.95) 0%,
+    rgba(15,12,10,.88) 55%,
+    rgba(15,12,10,.55) 80%,
+    rgba(15,12,10,.15) 100%);}
+  .hero-content{left:1.25rem;right:1.25rem;max-width:none;padding-right:1rem}
+  .hero-content h1{font-size:clamp(2.4rem,9vw,3.4rem)}
+  .tag{font-size:.98rem}
+  .hero-meta li{font-size:.82rem;gap:.6rem}
+  .hero-meta span{flex:0 0 64px;font-size:.58rem}
+  .cta-row .btn{padding:.6rem 1rem;font-size:.74rem}
   .section{padding:3rem 0}
   .container{padding:0 1.25rem}
   .two-col{grid-template-columns:1fr;gap:1.5rem}
